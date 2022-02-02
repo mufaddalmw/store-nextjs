@@ -114,3 +114,7 @@
     flex-direction: column;
   }
 }
+
+.button_primary {
+  background-color: #0070f3;
+}

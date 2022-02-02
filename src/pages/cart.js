@@ -18,8 +18,8 @@ export default function Cart({  }) {
   const [isLoading, setLoading] = useState(false)
   
   useEffect(() => {
-    setLoading(true)
-    cart.map(item => {
+    Boolean(cart.length) && cart.map(item => {
+      setLoading(true)
       fetch(`https://fakestoreapi.com/products/${item.productId}`)
         .then((res) => res.json())
         .then((newData) => {
@@ -43,13 +43,6 @@ export default function Cart({  }) {
         });
     });
   }, []);
-
-  
-  function isCherries(productObj) {
-    return productObj.productId === 1;
-  }
-  
-  
 
   // if (isLoading) return <p>Loading...</p>
   // if (!data) return <p>No profile data</p>

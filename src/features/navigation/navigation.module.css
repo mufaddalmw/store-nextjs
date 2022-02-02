@@ -1,7 +1,5 @@
 .navigation {
   display: flex;
-  justify-content: space-between;
-  
 }
 .navigation li {
   padding: 0 10px;
